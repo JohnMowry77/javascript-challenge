@@ -15,23 +15,28 @@ tableData.forEach(function(ufoSightings) {
 });
 
 //Use d3 to append one table row 'tr' for each ufoSightings object
-tableData.forEach(function(ufoSightings) {
-	console.log(ufoSightings);
-	var row= tbody.append("tr");
-});
+// tableData.forEach(function(ufoSightings) {
+// 	console.log(ufoSightings);
+// 	var row= tbody.append("tr");
+// });
 
 //Use Object.entries to console.log each ufoSightings value
 tableData.forEach(function(ufoSightings) {
 	console.log(ufoSightings);
 	var row =tbody.append("tr");
-	
+
 //create a dict
 Object.entries(ufoSightings).forEach(function([k,v]) {
 	console.log(k,v);
 	});
 });
 
-
-
 //Use d3 to append 1 cell per ufoSightings value
-
+tableData.forEach(function(ufoSightings) {
+	console.log(ufoSightings);
+	var row =tbody.append("tr");
+	Object.entries(ufoSightings).forEach(function([k,v]) {
+	console.log(k,v);
+	var cell=row.append("td");
+	});
+});
