@@ -48,15 +48,30 @@ tableData.forEach(function(ufoSightings) {
 
 //Step 5:
 //Select the button and the form
-var button = d3. select("button");
+var button = d3.select("#filter-btn");
 
-var button =de.select("form");
+var form =d3.select("#datetime");
 
 //Step 6:
 //Create event handlers
 button.on("click", runEnter);
+
 form.on("submit", runEnter);
 
+//Complete the event handeler function for the form
+function runEnter() {
+	// Prevent the page from refreshing
+	d3.event.preventDefault();
 
+	//Select the input element and get the raw html node
+	var ie =d3.select("#datetime");
+	//get the value property of the ie (input element)
+	var vp =ie.property("value");
 
+	console.log(vp);
+	console.log(tableData);
 
+var filteredData= tableData.filter(ufoDate=> ufoDate.datetime === vp);
+
+console.log(filteredData);
+};
