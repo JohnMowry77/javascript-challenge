@@ -47,9 +47,15 @@ tableData.forEach(function(ufoSightings) {
 });
 
 //Step 5:
-//Select the button 
+//Select the button and the form
 var button = d3. select("button");
 
+var button =de.select("form");
+
+//Step 6:
+//Create event handlers
+button.on("click", runEnter);
+form.on("submit", runEnter);
 
 
 
