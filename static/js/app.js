@@ -64,14 +64,31 @@ function runEnter() {
 	d3.event.preventDefault();
 
 	//Select the input element and get the raw html node
-	var ie =d3.select("#datetime");
+	var ufoElement =d3.select("#datetime");
 	//get the value property of the ie (input element)
-	var vp =ie.property("value");
+	var valueProp =ufoElement.property("value");
 
-	console.log(vp);
+	console.log(valueProp);
 	console.log(tableData);
 
-var filteredData= tableData.filter(ufoDate=> ufoDate.datetime === vp);
+var filteredData= tableData.filter(ufoDate=> ufoDate.datetime === valueProp);
+// console.log(filteredData);
 
-console.log(filteredData);
+//Then select the unordered list element by class name
+var table= d3.select('tbody');
+
+// remove any children from the list to
+table.html("");
+
+filteredData.forEach((ufoSightings)=> {
+	console.log(ufoSightings);
+	var row =tbody.append("tr");
+	Object.entries(ufoSightings).forEach(([k,v])=> {
+	var cell=row.append("td");
+	cell.text(v);
+	});
+});
+
+
 };
+
