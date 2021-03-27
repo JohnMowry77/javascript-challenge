@@ -16,6 +16,7 @@ tableData.forEach(function(ufoSightings) {
 	console.log(ufoSightings);
 });
 
+// Step 4:
 
 //Use d3 to append one table row 'tr' for each ufoSightings object
 // tableData.forEach(function(ufoSightings) {
@@ -23,7 +24,6 @@ tableData.forEach(function(ufoSightings) {
 // 	var row= tbody.append("tr");
 // });
 
-// Step 4:
 //Use Object.entries to console.log each ufoSightings value
 tableData.forEach(function(ufoSightings) {
 	console.log(ufoSightings);

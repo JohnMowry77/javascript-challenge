@@ -44,12 +44,22 @@ You can handle this... right? The planet Earth needs to know what we have found!
 * [UFO Sightings Data](StarterCode/static/js/data.js)
 
 Steps for level 1:
-1) create a variable for data in order to leave the original data.js file intact. 
+1) Create a variable for data in order to leave the original data.js file intact. 
 
 2) Get a reference to the table body
 
 3) Loop through tableData and console.log each ufoSightings Object
 
-4) use d3 to append one table row 'tr' for each ufoSightings object
+4) use d3 to append one table row 'tr' for each ufoSightings value
 
-5) 
+5) Use d3 to append 1 cell "td" per ufoSightings value
+
+6) Select the button and the form 
+
+7) Create the handlers 
+
+8) Complete the event handeler function for form
+
+9) Select the unordered list element by class name
+
+10) Remove any children from the list
