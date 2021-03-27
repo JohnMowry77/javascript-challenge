@@ -58,6 +58,7 @@ button.on("click", runEnter);
 
 form.on("submit", runEnter);
 
+//Step 7:
 //Complete the event handeler function for the form
 function runEnter() {
 	// Prevent the page from refreshing
@@ -68,12 +69,13 @@ function runEnter() {
 	//get the value property of the ie (input element)
 	var valueProp =ufoElement.property("value");
 
-	console.log(valueProp);
-	console.log(tableData);
+	// console.log(valueProp);
+	// console.log(tableData);
 
 var filteredData= tableData.filter(ufoDate=> ufoDate.datetime === valueProp);
 // console.log(filteredData);
 
+//Step 8:
 //Then select the unordered list element by class name
 var table= d3.select('tbody');
 
