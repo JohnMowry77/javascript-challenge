@@ -43,4 +43,13 @@ You can handle this... right? The planet Earth needs to know what we have found!
 
 * [UFO Sightings Data](StarterCode/static/js/data.js)
 
+Steps for level 1:
+1) create a variable for data in order to leave the original data.js file intact. 
 
+2) Get a reference to the table body
+
+3) Loop through tableData and console.log each ufoSightings Object
+
+4) use d3 to append one table row 'tr' for each ufoSightings object
+
+5) 

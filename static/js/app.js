@@ -1,28 +1,29 @@
+//Step 1:
 // from data.js
 var tableData = data;
 
 // YOUR CODE HERE!
 
+// Step 2:
 //Get a reference to the table body
 var tbody = d3.select('tbody');
-
 //console.log the weather data 
 console.log(tableData)
 
-//Step 1:
+//Step 3: 
 //Loop through data and console.log each ufoSightings object
 tableData.forEach(function(ufoSightings) {
 	console.log(ufoSightings);
 });
 
-// Step 2:
+
 //Use d3 to append one table row 'tr' for each ufoSightings object
 // tableData.forEach(function(ufoSightings) {
 // 	console.log(ufoSightings);
 // 	var row= tbody.append("tr");
 // });
 
-// Step 3:
+// Step 4:
 //Use Object.entries to console.log each ufoSightings value
 tableData.forEach(function(ufoSightings) {
 	console.log(ufoSightings);
@@ -34,7 +35,7 @@ Object.entries(ufoSightings).forEach(function([k,v]) {
 	});
 });
 
-// Step 4:
+// Step 5:
 //Use d3 to append 1 cell per ufoSightings value
 tableData.forEach(function(ufoSightings) {
 	console.log(ufoSightings);
@@ -46,19 +47,19 @@ tableData.forEach(function(ufoSightings) {
 	});
 });
 
-//Step 5:
+//Step 6:
 //Select the button and the form
 var button = d3.select("#filter-btn");
 
 var form =d3.select("#datetime");
 
-//Step 6:
+//Step 7:
 //Create event handlers
 button.on("click", runEnter);
 
 form.on("submit", runEnter);
 
-//Step 7:
+//Step 8:
 //Complete the event handeler function for the form
 function runEnter() {
 	// Prevent the page from refreshing
@@ -75,7 +76,7 @@ function runEnter() {
 var filteredData= tableData.filter(ufoDate=> ufoDate.datetime === valueProp);
 // console.log(filteredData);
 
-//Step 8:
+//Step 9:
 //Then select the unordered list element by class name
 var table= d3.select('tbody');
 
